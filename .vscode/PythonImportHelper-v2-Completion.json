@@ -72,6 +72,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "bcrypt",
         "kind": 6,
         "isExtraImport": true,
@@ -170,6 +178,14 @@
         "documentation": {}
     },
     {
+        "label": "UserLogin",
+        "importPath": "pydantic_schemas.user_login",
+        "description": "pydantic_schemas.user_login",
+        "isExtraImport": true,
+        "detail": "pydantic_schemas.user_login",
+        "documentation": {}
+    },
+    {
         "label": "auth",
         "importPath": "routes",
         "description": "routes",
@@ -205,6 +221,15 @@
         "documentation": {}
     },
     {
+        "label": "UserLogin",
+        "kind": 6,
+        "importPath": "pydantic_schemas.user_login",
+        "description": "pydantic_schemas.user_login",
+        "peekOfCode": "class UserLogin(BaseModel):\n    email: str\n    password: str",
+        "detail": "pydantic_schemas.user_login",
+        "documentation": {}
+    },
+    {
         "label": "signup_user",
         "kind": 2,
         "importPath": "routes.auth",
@@ -214,11 +239,20 @@
         "documentation": {}
     },
     {
+        "label": "login_user",
+        "kind": 2,
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "peekOfCode": "def login_user(user: UserLogin, db: Session = Depends(get_db)):\n    user_db = db.query(User).filter(User.email == user.email).first()\n    if not user_db: \n        raise HTTPException(400, 'User with this email doesn\\'t exist')\n    is_match = bcrypt.checkpw(user.password.encode(), user_db.password)\n    if not is_match:\n        raise HTTPException(400, 'Incorrect password!')\n    return user_db",
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "router = APIRouter()\n@router.post('/signup')\ndef signup_user(user: UserCreate, db: Session = Depends(get_db)):\n    user_db = db.query(User).filter(User.email == user.email).first() \n    if user_db:\n        raise HTTPException(400, 'User with the same email already exist!')\n    hashed_pw = bcrypt.hashpw(user.password.encode(), bcrypt.gensalt()) # type: ignore\n    user_db = User(id = str(uuid.uuid4()), email = user.email, password = hashed_pw, name = user.name)\n    db.add(user_db) \n    db.commit() ",
+        "peekOfCode": "router = APIRouter()\n@router.post('/signup', status_code = 201)\ndef signup_user(user: UserCreate, db: Session = Depends(get_db)):\n    user_db = db.query(User).filter(User.email == user.email).first() \n    if user_db:\n        raise HTTPException(400, 'User with the same email already exist!')\n    hashed_pw = bcrypt.hashpw(user.password.encode(), bcrypt.gensalt()) # type: ignore\n    user_db = User(id = str(uuid.uuid4()), email = user.email, password = hashed_pw, name = user.name)\n    db.add(user_db) \n    db.commit() ",
         "detail": "routes.auth",
         "documentation": {}
     },
