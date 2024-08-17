@@ -98,6 +98,15 @@
         "documentation": {}
     },
     {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -115,6 +124,14 @@
     },
     {
         "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -243,7 +260,16 @@
         "kind": 2,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "def login_user(user: UserLogin, db: Session = Depends(get_db)):\n    user_db = db.query(User).filter(User.email == user.email).first()\n    if not user_db: \n        raise HTTPException(400, 'User with this email doesn\\'t exist')\n    is_match = bcrypt.checkpw(user.password.encode(), user_db.password)\n    if not is_match:\n        raise HTTPException(400, 'Incorrect password!')\n    return user_db",
+        "peekOfCode": "def login_user(user: UserLogin, db: Session = Depends(get_db)):\n    user_db = db.query(User).filter(User.email == user.email).first()\n    if not user_db: \n        raise HTTPException(400, 'User with this email doesn\\'t exist')\n    is_match = bcrypt.checkpw(user.password.encode(), user_db.password)\n    if not is_match:\n        raise HTTPException(400, 'Incorrect password!')\n    token = jwt.encode({'id': user_db.id}, 'password_key')\n    return {'token': token, 'user': user_db}\n@router.get('/')",
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "current_user_data",
+        "kind": 2,
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "peekOfCode": "def current_user_data(db: Session = Depends(get_db), x_auth_token = Header()):\n    try:\n        if not x_auth_token:\n            raise HTTPException(401, 'No auth token, access denied!')\n        verified_token = jwt.decode(x_auth_token, 'password_key', ['HS256'])\n        if not verified_token:\n            raise HTTPException(401, 'Token verification failed, authorization denied!')\n        uid = verified_token.get('id')\n        return uid\n    except jwt.PyJWTError as e:",
         "detail": "routes.auth",
         "documentation": {}
     },

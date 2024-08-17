@@ -1,6 +1,7 @@
 import bcrypt # type: ignore
 import uuid
-from fastapi import HTTPException, APIRouter, Depends # type: ignore
+import jwt # type: ignore
+from fastapi import HTTPException, APIRouter, Depends, Header # type: ignore
 from models.user import User
 from pydantic_schemas.user_create import UserCreate # type: ignore
 from database import get_db
@@ -29,4 +30,18 @@ def login_user(user: UserLogin, db: Session = Depends(get_db)):
     is_match = bcrypt.checkpw(user.password.encode(), user_db.password)
     if not is_match:
         raise HTTPException(400, 'Incorrect password!')
-    return user_db
+    token = jwt.encode({'id': user_db.id}, 'password_key')
+    return {'token': token, 'user': user_db}
+
+@router.get('/')
+def current_user_data(db: Session = Depends(get_db), x_auth_token = Header()):
+    try:
+        if not x_auth_token:
+            raise HTTPException(401, 'No auth token, access denied!')
+        verified_token = jwt.decode(x_auth_token, 'password_key', ['HS256'])
+        if not verified_token:
+            raise HTTPException(401, 'Token verification failed, authorization denied!')
+        uid = verified_token.get('id')
+        return uid
+    except jwt.PyJWTError as e:
+        raise HTTPException(401, 'Token isn\'t valid, authorization denied!') from e

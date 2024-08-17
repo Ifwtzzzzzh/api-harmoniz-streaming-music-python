@@ -6,6 +6,7 @@
     "hashpw",
     "pydantic",
     "sessionmaker",
+    "sourcery",
     "sqlalchemy"
   ]
 }
