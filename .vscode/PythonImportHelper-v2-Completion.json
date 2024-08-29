@@ -1,5 +1,110 @@
 [
     {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
         "label": "declarative_base",
         "importPath": "sqlalchemy.ext.declarative",
         "description": "sqlalchemy.ext.declarative",
@@ -21,6 +126,70 @@
         "description": "models.base",
         "isExtraImport": true,
         "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base",
+        "description": "models.base",
+        "isExtraImport": true,
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base",
+        "description": "models.base",
+        "isExtraImport": true,
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "VARCHAR",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
         "documentation": {}
     },
     {
@@ -64,6 +233,54 @@
         "documentation": {}
     },
     {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -98,55 +315,6 @@
         "documentation": {}
     },
     {
-        "label": "jwt",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "jwt",
-        "description": "jwt",
-        "detail": "jwt",
-        "documentation": {}
-    },
-    {
-        "label": "HTTPException",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Header",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
         "label": "User",
         "importPath": "models.user",
         "description": "models.user",
@@ -171,7 +339,7 @@
         "documentation": {}
     },
     {
-        "label": "engine",
+        "label": "get_db",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -179,19 +347,11 @@
         "documentation": {}
     },
     {
-        "label": "Session",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
         "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "sessionmaker",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
+        "detail": "database",
         "documentation": {}
     },
     {
@@ -203,11 +363,86 @@
         "documentation": {}
     },
     {
+        "label": "auth_middleware",
+        "importPath": "middleware.auth_middleware",
+        "description": "middleware.auth_middleware",
+        "isExtraImport": true,
+        "detail": "middleware.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "auth_middleware",
+        "importPath": "middleware.auth_middleware",
+        "description": "middleware.auth_middleware",
+        "isExtraImport": true,
+        "detail": "middleware.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "Song",
+        "importPath": "models.song",
+        "description": "models.song",
+        "isExtraImport": true,
+        "detail": "models.song",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary",
+        "description": "cloudinary",
+        "detail": "cloudinary",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary.uploader",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary.uploader",
+        "description": "cloudinary.uploader",
+        "detail": "cloudinary.uploader",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteSong",
+        "importPath": "pydantic_schemas.favorite_song",
+        "description": "pydantic_schemas.favorite_song",
+        "isExtraImport": true,
+        "detail": "pydantic_schemas.favorite_song",
+        "documentation": {}
+    },
+    {
+        "label": "Favorite",
+        "importPath": "models.favorite",
+        "description": "models.favorite",
+        "isExtraImport": true,
+        "detail": "models.favorite",
+        "documentation": {}
+    },
+    {
         "label": "auth",
         "importPath": "routes",
         "description": "routes",
         "isExtraImport": true,
         "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "song",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "auth_middleware",
+        "kind": 2,
+        "importPath": "middleware.auth_middleware",
+        "description": "middleware.auth_middleware",
+        "peekOfCode": "def auth_middleware(x_auth_token = Header()):\n    try:\n        if not x_auth_token:\n            raise HTTPException(401, 'No auth token, access denied!')\n        verified_token = jwt.decode(x_auth_token, 'password_key', ['HS256'])\n        if not verified_token:\n            raise HTTPException(401, 'Token verification failed, authorization denied!')\n        uid = verified_token.get('id')\n        return {'uid': uid, 'token': x_auth_token}\n    except jwt.PyJWTError as e:",
+        "detail": "middleware.auth_middleware",
         "documentation": {}
     },
     {
@@ -220,12 +455,39 @@
         "documentation": {}
     },
     {
+        "label": "Favorite",
+        "kind": 6,
+        "importPath": "models.favorite",
+        "description": "models.favorite",
+        "peekOfCode": "class Favorite(Base):\n    __tablename__ = \"favorites\"\n    id = Column(TEXT, primary_key = True)\n    song_id = Column(TEXT, ForeignKey(\"songs.id\"))\n    user_id = Column(TEXT, ForeignKey(\"users.id\"))\n    song = relationship('Song')",
+        "detail": "models.favorite",
+        "documentation": {}
+    },
+    {
+        "label": "Song",
+        "kind": 6,
+        "importPath": "models.song",
+        "description": "models.song",
+        "peekOfCode": "class Song(Base):\n    __tablename__ = 'songs'\n    id = Column(TEXT, primary_key = True)\n    song_url = Column(TEXT)\n    thumbnail_url = Column(TEXT)\n    artist = Column(TEXT)\n    song_name = Column(VARCHAR(100))\n    hex_code = Column(VARCHAR(6))",
+        "detail": "models.song",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "models.user",
         "description": "models.user",
         "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(TEXT, primary_key = True)\n    name = Column(VARCHAR(100))\n    email = Column(VARCHAR(100))\n    password = Column(LargeBinary)",
         "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteSong",
+        "kind": 6,
+        "importPath": "pydantic_schemas.favorite_song",
+        "description": "pydantic_schemas.favorite_song",
+        "peekOfCode": "class FavoriteSong(BaseModel):\n    song_id: str",
+        "detail": "pydantic_schemas.favorite_song",
         "documentation": {}
     },
     {
@@ -269,7 +531,7 @@
         "kind": 2,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "def current_user_data(db: Session = Depends(get_db), x_auth_token = Header()):\n    try:\n        if not x_auth_token:\n            raise HTTPException(401, 'No auth token, access denied!')\n        verified_token = jwt.decode(x_auth_token, 'password_key', ['HS256'])\n        if not verified_token:\n            raise HTTPException(401, 'Token verification failed, authorization denied!')\n        uid = verified_token.get('id')\n        return uid\n    except jwt.PyJWTError as e:",
+        "peekOfCode": "def current_user_data(db: Session = Depends(get_db), user_dict = Depends(auth_middleware)):\n    user = db.query(User).filter(User.id == user_dict['uid']).first()\n    if not user:\n        raise HTTPException(404, 'User not found!')\n    return user",
         "detail": "routes.auth",
         "documentation": {}
     },
@@ -280,6 +542,51 @@
         "description": "routes.auth",
         "peekOfCode": "router = APIRouter()\n@router.post('/signup', status_code = 201)\ndef signup_user(user: UserCreate, db: Session = Depends(get_db)):\n    user_db = db.query(User).filter(User.email == user.email).first() \n    if user_db:\n        raise HTTPException(400, 'User with the same email already exist!')\n    hashed_pw = bcrypt.hashpw(user.password.encode(), bcrypt.gensalt()) # type: ignore\n    user_db = User(id = str(uuid.uuid4()), email = user.email, password = hashed_pw, name = user.name)\n    db.add(user_db) \n    db.commit() ",
         "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "upload_song",
+        "kind": 2,
+        "importPath": "routes.song",
+        "description": "routes.song",
+        "peekOfCode": "def upload_song(song: UploadFile = File(...), \n                thumbnail: UploadFile = File(...), \n                artist: str = Form(...), \n                song_name: str = Form(...), \n                hex_code: str = Form(...),\n                db: Session = Depends(get_db),\n                auth_dict = Depends(auth_middleware)):\n    song_id = str(uuid.uuid4())\n    song_res = cloudinary.uploader.upload(song.file, resource_type = 'auto', folder = f'songs/{song_id}')\n    thumbnail_res = cloudinary.uploader.upload(thumbnail.file, resource_type = 'image', folder = f'songs/{song_id}')",
+        "detail": "routes.song",
+        "documentation": {}
+    },
+    {
+        "label": "list_songs",
+        "kind": 2,
+        "importPath": "routes.song",
+        "description": "routes.song",
+        "peekOfCode": "def list_songs(db: Session = Depends(get_db), auth_details = Depends(auth_middleware)):\n    songs = db.query(Song).all()\n    return songs\n@router.post('/favorite')\ndef favorite_song(song:FavoriteSong, db: Session=Depends(get_db), auth_details = Depends(auth_middleware)):\n    user_id = auth_details['uid']\n    fav_song = db.query(Favorite).filter(Favorite.song_id == song.song_id, Favorite.user_id == user_id).first()\n    if fav_song:\n        db.delete(fav_song)\n        db.commit()",
+        "detail": "routes.song",
+        "documentation": {}
+    },
+    {
+        "label": "favorite_song",
+        "kind": 2,
+        "importPath": "routes.song",
+        "description": "routes.song",
+        "peekOfCode": "def favorite_song(song:FavoriteSong, db: Session=Depends(get_db), auth_details = Depends(auth_middleware)):\n    user_id = auth_details['uid']\n    fav_song = db.query(Favorite).filter(Favorite.song_id == song.song_id, Favorite.user_id == user_id).first()\n    if fav_song:\n        db.delete(fav_song)\n        db.commit()\n        return {'message': False}\n    else:\n        new_fav = Favorite(id=str(uuid.uuid4()), song_id=song.song_id, user_id=user_id)\n        db.add(new_fav)",
+        "detail": "routes.song",
+        "documentation": {}
+    },
+    {
+        "label": "list_fav_songs",
+        "kind": 2,
+        "importPath": "routes.song",
+        "description": "routes.song",
+        "peekOfCode": "def list_fav_songs(db: Session = Depends(get_db), auth_details = Depends(auth_middleware)):\n    user_id = auth_details['uid']\n    fav_songs = db.query(Favorite).filter(Favorite.user_id == user_id).options(joinedload(Favorite.song)).all()\n    return fav_songs",
+        "detail": "routes.song",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routes.song",
+        "description": "routes.song",
+        "peekOfCode": "router = APIRouter()\ncloudinary.config( \n    cloud_name = \"dgk7spjs5\", \n    api_key = \"263483452198988\", \n    api_secret = \"SKFrma36I_J5_Z0TWthOTk1K1Ew\",\n    secure=True\n)\n@router.post('/upload', status_code = 201)\ndef upload_song(song: UploadFile = File(...), \n                thumbnail: UploadFile = File(...), ",
+        "detail": "routes.song",
         "documentation": {}
     },
     {
@@ -323,7 +630,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\napp.include_router(auth.router, prefix = '/auth')\nBase.metadata.create_all(engine)",
+        "peekOfCode": "app = FastAPI()\napp.include_router(auth.router, prefix = '/auth')\napp.include_router(song.router, prefix = '/song')\nBase.metadata.create_all(engine)",
         "detail": "main",
         "documentation": {}
     }

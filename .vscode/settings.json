@@ -1,12 +1,17 @@
 {
   "cSpell.words": [
     "checkpw",
+    "cloudinary",
     "fastapi",
+    "FAVORITED",
+    "Frma",
     "gensalt",
     "hashpw",
+    "joinedload",
     "pydantic",
     "sessionmaker",
     "sourcery",
+    "spjs",
     "sqlalchemy"
   ]
 }

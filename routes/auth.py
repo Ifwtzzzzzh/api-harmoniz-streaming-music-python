@@ -7,6 +7,7 @@ from pydantic_schemas.user_create import UserCreate # type: ignore
 from database import get_db
 from sqlalchemy.orm import Session # type: ignore
 from pydantic_schemas.user_login import UserLogin
+from middleware.auth_middleware import auth_middleware
 
 router = APIRouter()
 
@@ -34,14 +35,8 @@ def login_user(user: UserLogin, db: Session = Depends(get_db)):
     return {'token': token, 'user': user_db}
 
 @router.get('/')
-def current_user_data(db: Session = Depends(get_db), x_auth_token = Header()):
-    try:
-        if not x_auth_token:
-            raise HTTPException(401, 'No auth token, access denied!')
-        verified_token = jwt.decode(x_auth_token, 'password_key', ['HS256'])
-        if not verified_token:
-            raise HTTPException(401, 'Token verification failed, authorization denied!')
-        uid = verified_token.get('id')
-        return uid
-    except jwt.PyJWTError as e:
-        raise HTTPException(401, 'Token isn\'t valid, authorization denied!') from e
+def current_user_data(db: Session = Depends(get_db), user_dict = Depends(auth_middleware)):
+    user = db.query(User).filter(User.id == user_dict['uid']).first()
+    if not user:
+        raise HTTPException(404, 'User not found!')
+    return user
