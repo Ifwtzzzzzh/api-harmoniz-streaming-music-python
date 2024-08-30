@@ -209,7 +209,7 @@
         "documentation": {}
     },
     {
-        "label": "LargeBinary",
+        "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -217,7 +217,7 @@
         "documentation": {}
     },
     {
-        "label": "Column",
+        "label": "LargeBinary",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -241,7 +241,23 @@
         "documentation": {}
     },
     {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -459,7 +475,7 @@
         "kind": 6,
         "importPath": "models.favorite",
         "description": "models.favorite",
-        "peekOfCode": "class Favorite(Base):\n    __tablename__ = \"favorites\"\n    id = Column(TEXT, primary_key = True)\n    song_id = Column(TEXT, ForeignKey(\"songs.id\"))\n    user_id = Column(TEXT, ForeignKey(\"users.id\"))\n    song = relationship('Song')",
+        "peekOfCode": "class Favorite(Base):\n    __tablename__ = \"favorites\"\n    id = Column(TEXT, primary_key = True)\n    song_id = Column(TEXT, ForeignKey(\"songs.id\"))\n    user_id = Column(TEXT, ForeignKey(\"users.id\"))\n    song = relationship('Song')\n    user = relationship('User', back_populates='favorites')",
         "detail": "models.favorite",
         "documentation": {}
     },
@@ -477,7 +493,7 @@
         "kind": 6,
         "importPath": "models.user",
         "description": "models.user",
-        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(TEXT, primary_key = True)\n    name = Column(VARCHAR(100))\n    email = Column(VARCHAR(100))\n    password = Column(LargeBinary)",
+        "peekOfCode": "class User(Base):\n    __tablename__ = 'users'\n    id = Column(TEXT, primary_key=True)\n    name = Column(VARCHAR(100))\n    email = Column(VARCHAR(100))\n    password = Column(LargeBinary)\n    favorites = relationship('Favorite', back_populates='user')",
         "detail": "models.user",
         "documentation": {}
     },
@@ -531,7 +547,7 @@
         "kind": 2,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "def current_user_data(db: Session = Depends(get_db), user_dict = Depends(auth_middleware)):\n    user = db.query(User).filter(User.id == user_dict['uid']).first()\n    if not user:\n        raise HTTPException(404, 'User not found!')\n    return user",
+        "peekOfCode": "def current_user_data(db: Session = Depends(get_db), user_dict = Depends(auth_middleware)):\n    user = db.query(User).filter(User.id == user_dict['uid']).options(joinedload(User.favorites)).first()\n    if not user:\n        raise HTTPException(404, 'User not found!')\n    return user",
         "detail": "routes.auth",
         "documentation": {}
     },
