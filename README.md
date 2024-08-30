@@ -1,4 +1,4 @@
-# Harmoniz - Streaming Music App
+# 🎶 Harmoniz - Streaming Music App
 
 Immerse yourself in the world of Harmoniz, where every beat resonates with your soul. Discover new artists, create personalized playlists, and enjoy high-fidelity sound that brings your music to life. With HarmoniX, your musical journey is always in perfect harmony.
 
